@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from photos import views as photos_views 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', photos_views.home)
 ]
