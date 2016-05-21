@@ -19,5 +19,7 @@ from photos import views as photos_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', photos_views.home)
+    url(r'^$', photos_views.home, name='photos_home'),
+
+    url(r'^fotos/(?P<pk>[0-9]+)$',photos_views.detail, name='photo_detail')
 ]
